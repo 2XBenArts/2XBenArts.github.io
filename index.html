@@ -9,12 +9,20 @@
     <link rel="stylesheet" type="text/css" href = "style.css">
     <link rel="icon" href= "Users/user/Pictures/2XBenLogo.jpg">
     <style>#car {
-        position:round;
+        position:absolute;
         top: 50px;
         left: 50px;
+        transform: translate(-50%,-50%);
+        width: 200px;
+        height: 100px;
+        transition:transform 0.5s;
       }
     </style>
+    </head>
+    <body>
+      <div class ="container">
     <img id="car" src="Users/user/Pictures/movingCar.jpg" alt="Car">
+    </div>
   <script>
     setInterval(function() {
       var carWidth = car.offsetWidth;
