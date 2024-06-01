@@ -11,7 +11,50 @@ body{
     margin:auto;
     overflow:hidden;
   }
+  #car {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+  }
   
+  .wheel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+  }
+  
+  .body {
+    width: 150px;
+    height: 50px;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .door {
+    width: 50px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .window {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
   ul{
     margin:0;
     padding:0;
