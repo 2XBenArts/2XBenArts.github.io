@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Hi My Name Is 2XBenArts And I am a proffessional web developer">
    <meta name="keywords" content="web design, c++, python , html , css , professional web design">
-    <title>2XBenEnterprise</title>
+    <title>{% block title %}{% endblock %} - 2XBenEnterprise</title>
     <link rel="stylesheet" type="text/css" href = "style.css">
     <link rel="icon" href= "Users/user/Pictures/2XBenLogo.jpg">
     <style>#car {
@@ -65,18 +65,18 @@
         </div>
         <nav>
           <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li class="current"><a href="{% url'index.html' %}">Home</a></li>
+            <li><a href="{% url 'about.html' %}">About</a></li>
+            <li><a href="{% url 'services.html' %}">Services</a></li>
           </ul>
         </nav>
       </div>
     </header>
-
+     {% block content %}{% endblock %}
     <section id="showcase">
       <div class="container">
         <h1>Affordable Professional Web Design</h1>
-        <p>Welcome to [2XBenEnterprise]'s Creative Studio!
+        <p>Welcome to 2XBenEnterprise's Creative Studio!
 
             I am a versatile professional offering a range of services in graphic design, web development, software development, and engineering. With a passion for creativity and innovation, I bring a unique blend of skills and expertise to help bring your ideas to life.
             
@@ -113,7 +113,7 @@
         <div class="box">
           <img src= Users/user/Pictures/htmlLogo.jpg>
           <h3>HTML5 Markup</h3>
-          <p> Unlock the Power of HTML with [2XBenEnterprise]!
+          <p> Unlock the Power of HTML with 2XBenEnterprise!
 
             As a seasoned web developer with a deep understanding of HTML, I bring a wealth of expertise to the table when it comes to crafting exceptional web experiences. HTML, the backbone of the web, is not just a language for me – it's a canvas through which I bring ideas to life and create immersive digital experiences.
             
@@ -164,7 +164,7 @@
           <h3>Graphic Design Using Photoshop</h3>
           <p>Welcome to 2XBenArts's Creative Studio – Where Design Meets Innovation!
 
-            Are you looking to elevate your brand with captivating visuals that leave a lasting impression? Look no further! I am [Your Name], a passionate graphic designer dedicated to bringing your ideas to life through the power of design.
+            Are you looking to elevate your brand with captivating visuals that leave a lasting impression? Look no further! I am 2XBenArts, a passionate graphic designer dedicated to bringing your ideas to life through the power of design.
             
                Crafting Visual Stories:
             At the heart of every great design is a compelling story waiting to be told. As a skilled graphic designer, I specialize in translating concepts and emotions into visually stunning creations that resonate with your audience and communicate your brand's unique identity.
