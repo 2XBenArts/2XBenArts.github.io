@@ -4,18 +4,21 @@ body{
     margin:0;
     background-color:#f4f4f4;
   }
-  
-  /* Global */
-  .container{
-    width:80%;
-    margin:auto;
-    overflow:hidden;
-  }
+   :root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --tertiary-color: #7228a7;
+}
+   .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
   #car {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(0, 0);
     width: 200px;
     height: 100px;
   }
@@ -40,7 +43,6 @@ body{
   .door {
     width: 50px;
     height: 100px;
-    background-color: red;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
