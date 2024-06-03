@@ -8,23 +8,17 @@
     <title>2XBenEnterprise</title>
     <link rel="stylesheet" type="text/css" href = "style.css">
     <link rel="icon" href= "Users/user/Pictures/2XBenLogo.jpg">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>#car {
-        position:absolute;
-        top: 50px;
-        left: 50px;
-        transform: translate(-50%,-50%);
-        width: 200px;
-        height: 100px;
-        transition:transform 0.5s;
-      }
-    </style>
-    </head>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+      const car = document.getElementById("car");
+      car.classList.add("moveCar");
+      car.style.animationPlayState ; "running";
+      </script>
+  </head>
     <body>
       <div class ="container">
     <img id="car" src="Users/user/Pictures/movingCar.jpg" alt="Car">
     </div>
-  <script>
+      <script>
     setInterval(function() {
       var carWidth = car.offsetWidth;
       var carHeight = car.offsetHeight;
