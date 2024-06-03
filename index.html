@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta name="viewport" content="width = device-width, intial-scale = 1.0">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0">
     <meta charset="utf-8">
-    <meta name="description" content="Hi My Name Is 2XBenArts And I am a proffessional web developer">
+    <meta name="description" content="Hi My Name Is 2XBenArts And I am a professional web developer">
    <meta name="keywords" content="web design, c++, python , html , css , professional web design">
     <title>{% block title %}{% endblock %} - 2XBenEnterprise</title>
     <link rel="stylesheet" type="text/css" href = "style.css">
@@ -57,7 +57,7 @@
         document.body.style.backgroundColor = "blue";
     }
 </script>
-   <body background= "  " >
+   <body>
     <header>
       <div class="container">
         <div id="branding">
@@ -65,9 +65,9 @@
         </div>
         <nav>
           <ul>
-            <li class="current"><a href="{% url'index.html' %}">Home</a></li>
-            <li><a href="{% url 'about.html' %}">About</a></li>
-            <li><a href="{% url 'services.html' %}">Services</a></li>
+            <li class="current"><a>Home</a></li>
+            <li><a href= "about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
           </ul>
         </nav>
       </div>
@@ -102,8 +102,10 @@
       <div class="container">
         <h1>Subscribe To Our Newsletter</h1>
         <form>
-          <input type="email" placeholder="Enter Email..." required>
-          <button type="submit" class="button_1">Subscribe</button>
+            <label>
+                <input type="email" placeholder="Enter Email..." required>
+            </label>
+            <button type="submit" class="button_1">Subscribe</button>
         </form>
       </div>
     </section>
@@ -111,7 +113,7 @@
     <section id="boxes">
       <div class="container">
         <div class="box">
-          <img src= Users/user/Pictures/htmlLogo.jpg>
+          <img src= Users/user/Pictures/htmlLogo.jpg alt="html programming language logo">
           <h3>HTML5 Markup</h3>
           <p> Unlock the Power of HTML with 2XBenEnterprise!
 
@@ -134,7 +136,7 @@
             Get in touch today to explore how my HTML expertise can elevate your online presence and bring your vision to life!</p>
         </div>
         <div class="box">
-          <img src="Users/user/Pictures/cssLogo.jpg  ">
+          <img src="Users/user/Pictures/cssLogo.jpg  " alt="css programming language logo">
           <h3>CSS3 Styling</h3>
           <p>Elevate Your Web Design with 2XBenEnterprise CSS Expertise!
 
@@ -160,9 +162,9 @@
             Contact me today to explore how my CSS expertise can elevate your web projects and bring your creative vision to life!</p>
         </div>
         <div class="box">
-          <img src="Users/user/Pictures/photoshoplogo.jpg">
+          <img src="Users/user/Pictures/photoshoplogo.jpg" alt="photoshop logo">
           <h3>Graphic Design Using Photoshop</h3>
-          <p>Welcome to 2XBenArts's Creative Studio – Where Design Meets Innovation!
+          <p>Welcome to 2XBenArt's Creative Studio – Where Design Meets Innovation!
 
             Are you looking to elevate your brand with captivating visuals that leave a lasting impression? Look no further! I am 2XBenArts, a passionate graphic designer dedicated to bringing your ideas to life through the power of design.
             
@@ -187,7 +189,6 @@
     </section>
 
     <footer>
-      <p>2XBenEnterprise Web Deisgn, Copyright &copy; 2024</p>
+      <p>2XBenEnterprise Web Design, Copyright &copy; 2024</p>
     </footer>
   </body>
-</html>
