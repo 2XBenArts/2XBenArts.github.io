@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta name="viewport" content="width = device-width, initial-scale = 1.0">
@@ -8,37 +7,6 @@
     <title>2XBenEnterprise</title>
     <link rel="stylesheet" type="text/css" href = "style.css">
     <link rel="icon" href= "Users/user/Pictures/2XBenLogo.jpg">
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <style>#car {
-        position:absolute;
-        top: 50px;
-        left: 50px;
-        transform: translate(-50%,-50%);
-        width: 200px;
-        height: 100px;
-        transition:transform 0.5s;
-      }
-    </style>
-    </head>
-    <body>
-      <div class ="container">
-    <img id="car" src="Users/user/Pictures/movingCar.jpg" alt="Car">
-    </div>
-  <script>
-    setInterval(function() {
-      var carWidth = car.offsetWidth;
-      var carHeight = car.offsetHeight;
-      var containerWidth = document.querySelector('.container').offsetWidth;
-      var containerHeight = document.querySelector('.container').offsetHeight;
-      
-      x += speed * Math.cos(Math.PI / 4); // move horizontally
-      y += speed * Math.sin(Math.PI / 4); // move vertically
-      
-      // Adjust the x and y coordinates to keep the car within the boundaries
-      car.style.left = x + "px";
-      car.style.top = y + "px";
-    }, 1000 / 60); // 60 frames per se
-      var speed = 5;
   </script>
   </body>
   </html>
@@ -46,6 +14,22 @@
     function tonggleBackground() {
         document.body.style.backgroundColor = "blue";
     }
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slide-show img");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = 0;
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.opacity = 1;
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
 </script>
    <body>
     <header>
@@ -65,25 +49,16 @@
     <section id="showcase">
       <div class="service-box">
         <h1>Affordable Professional Web Design</h1>
-        <p>Welcome to 2XBenEnterprise's Creative Studio!
-
-            I am a versatile professional offering a range of services in graphic design, web development, software development, and engineering. With a passion for creativity and innovation, I bring a unique blend of skills and expertise to help bring your ideas to life.
-            
-            Graphic Design Services:
-            Transform your vision into stunning visuals with my graphic design services. From logo design and branding to marketing materials and illustrations, I specialize in creating captivating designs that resonate with your audience and elevate your brand.
-            
-              Web Development Solutions:
-            Need a dynamic and user-friendly website to showcase your business or portfolio? Look no further! I specialize in creating responsive and visually appealing websites that are tailored to your needs. Whether you need a simple landing page or a complex e-commerce platform, I can bring your online presence to the next level.
-            
-              Software Development Expertise:
-            Empower your business with custom software solutions designed to streamline processes, enhance productivity, and drive growth. As a software developer, I have the skills and experience to develop scalable and efficient applications that meet your specific requirements and exceed your expectations.
-            
-              Engineering Innovations:
-            From concept to execution, I offer engineering solutions that push boundaries and solve complex challenges. Whether you need product design, prototyping, or technical consultancy, my engineering background equips me to deliver high-quality solutions that meet industry standards and drive success.
-            
-            At [2XBenEnterprise]'s Creative Studio, I am dedicated to delivering exceptional results that exceed your expectations. Let's collaborate to turn your ideas into reality and create a lasting impact in the digital world.
-
-            Ready to take your projects to the next level? Contact me today to discuss how I can help bring your vision to life!</p>
+        <p>
+          <div class ="slide-show">
+            <img scr ="Users\user\Pictures\Graphic1.jpg" alt = "graphic design model 1">
+            <img scr =" Users\user\Pictures\Graphic2.jpg" alt = "graphic design model 2">
+            <img scr =" Users\user\Pictures\Graphic 3.png" alt = "graphic design model 3">
+            <img scr =" Users\user\Pictures\Graphic4.jpg" alt = "graphic design model 4">
+            <img scr =" Users\user\Pictures\Graphic5.jpg" alt = "graphic design model 5">
+            <img scr =" Users\user\Pictures\Graphic6.jpg" alt = "graphic design model 6">
+          </div>
+        </p>
       </div>
     </section>
 
