@@ -39,6 +39,21 @@
     height: 300px; /* Adjust as needed */
     
   }
+  .whatsap-button{
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    font-size: 20px;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+  }
+  .whatsap-button:hover{
+    background-color: #1EBB61;
+  }
   ul{
     margin:0;
     padding:0;
