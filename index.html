@@ -7,31 +7,21 @@
     <title>2XBenEnterprise</title>
     <link rel="stylesheet" type="text/css" href = "style.css">
     <link rel="icon" href= "Users/user/Pictures/2XBenLogo.jpg">
+    <style>
+      .slide-show img{
+        display: none;
+      }
+      .slide-show img.active{
+        display:block;
+      }
+      </style>
   </head>
-  </body>
-  </html>
-  <script>
+    <script>
     function tonggleBackground() {
         document.body.style.backgroundColor = "blue";
     }
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("slide-show img");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.opacity = 0;
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.opacity = 1;
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
-}
-</script>
-   <body>
+   </script>
+ <body>
     <header>
       <div class="container">
         <div id="branding">
@@ -48,15 +38,16 @@ function showSlides() {
     </header>
     <section id="showcase">
       <div class="service-box">
-        <h1>Affordable Professional Web Design</h1>
-        <p>
+        <h1>Affordable Professional Web/Graphic designs</h1>
           <div class ="slide-show">
-            <img scr = Users/user/Pictures/Graphic1.jpg alt = "graphic design model 1">
-            <img scr = Users/user/Pictures/Graphic2.jpg alt = "graphic design model 2">
-            <img scr = Users/user/Pictures/Graphic4.jpg alt = "graphic design model 4">
-            <img scr = Users/user/Pictures/Graphic5.jpg alt = "graphic design model 5">
-            <img scr = Users/user/Pictures/Graphic6.jpg alt = "graphic design model 6">
+            <img src = Users/user/Pictures/Graphic1.jpg alt= "graphic design model 1" class = "slide">
+            <img src = Users/user/Pictures/Graphic2.jpg alt = "graphic design model 2" class = "slide">
+            <img src = Users/user/Pictures/Graphic4.jpg alt = "graphic design model 3" class = "slide">
+            <img src = Users/user/Pictures/Graphic5.jpg alt = "graphic design model 4" class = "slide">
+            <img src = Users/user/Pictures/Graphic6.jpg alt = "graphic design model 5" class = "slide">
           </div>
+          <button class = "prev">Prev</button>
+        <button class ="next">Next</button>
         </p>
       </div>
     </section>
@@ -153,5 +144,36 @@ function showSlides() {
 
     <footer>
       <p>2XBenEnterprise Web Design, Copyright &copy; 2024</p>
-    </footer>
-  </body>
+    </footer> 
+      <script>
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+     const nextButton = document.querySelector('.next');
+     let currentSlide = 0;
+
+        function showSlide(index) {
+          slides.forEach(slide => slide.classList.remove('active'));
+           slides[index].classList.add('active');
+         }
+
+           function nextSlide() {
+         currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Initial display
+showSlide(currentSlide);
+
+// Event listeners for buttons
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+
+// Auto-advance (optional)
+setInterval(nextSlide, 5000); // Change slide every 5 seconds
+     </script>
+ </body>
