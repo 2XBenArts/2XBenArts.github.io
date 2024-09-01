@@ -3,7 +3,7 @@
 
 ## 🌟 About Me
 
-I'm a **2nd-year Computer Science student** with a passion for:
+I'm a **Computer Science student** with a passion for:
 
 - 🌐 **Web Development**: Crafting sleek and functional websites.
 - 🎨 **Graphic Design**: Creating visually appealing graphics.
